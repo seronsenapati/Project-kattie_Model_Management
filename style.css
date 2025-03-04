@@ -1,0 +1,579 @@
+@font-face {
+    font-family: 'monumnet';
+    src: url(./MonumentExtended-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2d2d2d60;
+    border-radius: 5px;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+    position: relative;
+    padding-top: 0.1px;
+}
+
+#nav {
+    width: 100%;
+    height: 12vh;
+    margin-top: 40px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav h1 {
+    height: 100%;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monumnet;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    cursor: pointer;
+}
+
+#nav h1::after {
+    content: "©";
+    font-family: gilroy;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: 21%;
+    right: 22%;
+}
+
+#nav h1::before {
+    content: "Model Management";
+    font-family: gilroy;
+    font-size: 11px;
+    font-weight: 500;
+    position: absolute;
+    letter-spacing: -0.3px;
+    bottom: 17%;
+    left: 44%;
+}
+
+#nav h2 {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #000;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#nav h2:nth-last-child(2) {
+    width: 28%;
+}
+
+#nav h2:last-child {
+    width: 10%;
+    border-right: none;
+}
+
+#center {
+    width: 100%;
+    height: 90%;
+    padding: 3.5vw;
+    position: relative;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#overlay {
+    width: 100%;
+    height: 53%;
+    position: absolute;
+    bottom: 0;
+    padding: 3vw;
+    background-color: #00000036;
+    backdrop-filter: blur(10px);
+}
+
+#overlay1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+#overlay1 h1 {
+    font-family: monumnet;
+    font-size: 3.5vw;
+}
+
+#overlay1 h2 {
+    font-size: 1vw;
+    padding: 2vw 2.1vw;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+#overlay2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    border-top: 2px solid #fff;
+    padding: 1.5vw 0;
+}
+
+#overlay2 h4 {
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+#overlay2 img {
+    height: 3vw;
+}
+
+#scroll {
+    width: 100%;
+    height: 40vh;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#container {
+    width: 115%;
+    height: 100%;
+    display: inline-block;
+    padding: 1.1vw;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll img {
+    height: 80%;
+    width: 10.9%;
+    margin: 1vw;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 30% 30%;
+    border: 2px solid #000;
+}
+
+@keyframes anime {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#alphabet {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+}
+
+#alphabet h5 {
+    font-size: 1.7vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.1vw;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+    margin-right: 1.5vw;
+}
+
+#alphabet h6 {
+    font-size: 1vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.1vw;
+    padding: 0.5vw 0.7vw;
+    border-radius: 50%;
+    border: 2px solid #00000000;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+
+#alphabet h6:hover {
+    border: 2px solid #000;
+}
+
+#page2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 5vw;
+}
+
+#page2-part1 {
+    width: 50%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1726556267339-b8af2ccbb2f7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vZGVsJTIwcG9ydGZvbGlvfGVufDB8fDB8fHww);
+    background-size: cover;
+    background-position: center;
+}
+
+#page2-part2 {
+    width: 46%;
+    height: 100%;
+}
+
+#page2-part2 img {
+    height: 60%;
+    object-fit: cover;
+    width: 100%;
+    object-position: 30% 30%;
+}
+
+#text {
+    padding: 1.5vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#text h4,
+h2 {
+    font-weight: 600;
+    letter-spacing: -0.1vh;
+}
+
+#page3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 5vw 4vw;
+}
+
+#page3>h1 {
+    text-align: center;
+    font-family: monumnet;
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-weight: 900;
+    letter-spacing: -0.1vw;
+    margin-bottom: 8vh;
+}
+
+#page4 {
+    width: 100%;
+    height: 100%;
+    padding: 2vw 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page4-part1 {
+    height: 100%;
+    width: 50%;
+    background-image: url(https://plus.unsplash.com/premium_photo-1669703777695-f8052a432411?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW9kZWx8ZW58MHx8MHx8fDA%3D);
+    background-size: cover;
+    background-position: 60% 60%;
+}
+
+#page4-part2 {
+    height: 100%;
+    width: 47%;
+    padding: 0.3vw 0vw;
+}
+
+#page4-part2 h1,h3,h5{
+    margin-bottom: 3.4vh;
+}
+#page4-part2 h1{
+    font-size: 1.8vw;
+    font-weight: 800;
+    letter-spacing: 0.1vw;
+    font-family: monumnet;
+    text-transform: uppercase;
+}
+
+#page4-part2 h3{
+    font-size: 1.2vw;
+    font-weight: 600;
+    letter-spacing: -0.05vw;
+}
+
+#page4-part2 h5{
+    font-size: 0.8vw;
+    font-weight: 600;
+    letter-spacing: -0.05vw;
+}
+
+#page4-part2-img{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page4-part2-img img{
+    height: 100%;
+    width: 48%;
+    object-fit: cover;
+    object-position: 30% 20%;
+}
+
+
+
+.elem {
+    width: 100%;
+    height: 16.5vh;
+    border-top: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    position: relative;
+    transition: 0.6s all ease;
+    cursor: pointer;
+}
+
+.elem:nth-last-child(1) {
+    border-bottom: 2px solid #000;
+}
+
+.elem:hover {
+    background-color: #e3e3e3ee;
+}
+
+.elem img {
+    position: absolute;
+    height: 15vh;
+    width: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 30% 30%;
+    left: 20%;
+    opacity: 0;
+    transition: 0.6s all ease;
+}
+
+.elem:hover img {
+    opacity: 1;
+    left: 30%;
+}
+
+.elem h4 {
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 8%;
+}
+
+.elem .elemInner {
+    width: 43%;
+}
+
+.elem .elemInner h1 {
+    font-size: 2.7vw;
+    font-weight: 500;
+    letter-spacing: -0.1vw;
+}
+
+.elem .elemInner h5 {
+    font-size: 0.8vw;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#mark {
+    width: 100%;
+    color: #fff;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0.7vw;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    margin-top: 7vh;
+}
+
+#mark h1 {
+    font-size: 3vw;
+    font-weight: 500;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: monumnet;
+    -webkit-text-stroke: 2px #000;
+    color: transparent;
+    letter-spacing: 3px;
+    margin-right: 16px;
+    animation: move 4s linear infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 22px));
+    }
+}
+
+#footer {
+    width: 100%;
+    height: 40%;
+    margin-top: 10vh;
+}
+#footer-inner {
+    width: 100%;
+    height: 30vh;
+    margin-top: 40px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+#footer-inner h1 {
+    height: 100%;
+    width: 22%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: top;
+    font-family: monumnet;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    cursor: pointer;
+    margin: 1.5vh 2vw;
+}
+
+#footer-inner h1::after {
+    content: "©";
+    font-family: gilroy;
+    font-size: 17px;
+    font-weight: 500;
+    position: absolute;
+    right: 52%;
+}
+
+#footer-inner h1::before {
+    content: "Model Management";
+    font-family: gilroy;
+    font-size: 11px;
+    font-weight: 500;
+    position: absolute;
+    letter-spacing: -0.3px;
+    top: 18%;
+    left: 12%;
+}
+.footer-text{
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    border-right: 2px solid #000;
+}
+.footer-text h2{
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 3vh 0vw;
+}
+
+#footer-last{
+    width: 40%;
+    height: 100%;
+}
+
+.footer-last-text{
+    width: 100%;
+    height: 40%;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+.footer-last-text h2{
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: -0.05vw;
+    margin: 3vh 0vw;
+}
+.footer-last-part{
+    width: 100%;
+    height: 60%;
+    padding: 2vh 10vw;
+    padding-right: 0;
+}
+#footer-last-part2 h3{
+    margin:0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.05vw;
+}
+
+#footer-last-part1{
+    margin-bottom: 1.7vh;
+}
+#footer-last-part1 i{
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 0.6vw;
+    opacity: 0.8;
+}
+#footer-last-part1 i:hover{
+    opacity: 1;
+}
+
